@@ -1,0 +1,1239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+
+     
+@import url("https://fonts.googleapiscom/css2?family=Poppins:wght@40;500;600;700&family=Ubuntu:wght@400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+
+  background: #080808;
+  color: #fff;
+}
+
+#header {
+  scroll-behavior: smooth;
+  width: 100%;
+  height: 100vh;
+  background-image: url(img/bilal\ pic\ \(1\).jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: 100;
+  /* opacity: 0;  */
+}
+.container {
+  padding: 20px 10%;
+  /* background-color: #ff004f; */
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  transition: 0.3s;
+  background-color: #ff00511c;
+  top: 0;
+  opacity: 0;
+  animation: slideTop 1s ease forwards;
+  /* animation-delay: (0.2s * var(--i)); */
+  animation-delay: (0.2s * var(--i));
+}
+.logo {
+  background-image: url(https://images.unsplash.com/photo-1579546929518-9e396f3cc809?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size: cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  width: 210px;
+  /* position: relative; */
+  font-size: 45px;
+
+  /* color: black; */
+  text-decoration: none;
+  font-weight: 900;
+  cursor: default;
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
+}
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 10px 20px;
+}
+nav ul li a {
+  color: #fff;
+  /* color: black; */
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+}
+nav ul li a:hover {
+  font-size: 21px;
+  background-color: black;
+}
+nav ul li a::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: #ff004f;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.5s;
+}
+#element {
+  color: #ff0051;
+  font-weight: 900;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+.header-text {
+  margin-top: 20%;
+  font-size: 30px;
+}
+.header-text h1 {
+  font-size: 60px;
+  margin-top: 20px;
+}
+.header-text h1 span {
+  color: #ff00518e;
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slideTop {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slideBottom {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+/* ------------------ABOUT------------- */
+
+#about {
+  padding: 80px 0;
+  color: #ababab;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.about-col-1 {
+  flex-basis: 35%;
+}
+
+.about-col-1 img {
+  width: 100%;
+  /* background-color: #ff0051; */
+
+  border-radius: 15px;
+}
+.about-col-2 {
+  flex-basis: 60%;
+}
+.sub-title {
+  font-size: 60px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.tab-titles {
+  display: flex;
+  margin: 20px 0 40px;
+}
+.tab-links {
+  margin-right: 50px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+}
+.tab-links::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: #ff004f;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  transition: 0.5s;
+}
+.tab-links.active-link::after {
+  width: 100%;
+}
+.tab-contents ul li {
+  list-style: none;
+  margin: 10px 0;
+}
+.tab-contents ul li span {
+  color: #b54769;
+  font-size: 14px;
+}
+.tab-contents {
+  display: none;
+}
+.tab-contents.active-tab {
+  display: block;
+}
+
+/* -------------------------services------------------------------ */
+
+#services {
+  padding: 30px 0;
+}
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+}
+
+.services-list div {
+  background-color: #262626;
+  padding: 40px;
+  font-size: 13px;
+  font-weight: 300;
+  border-radius: 10px;
+  transition: background 0.5s, transform 0.5s;
+}
+.services-list div i {
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+.services-list div h2 {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+.services-list div a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 12px;
+  margin-top: 20px;
+  display: inline-block;
+}
+.services-list div:hover {
+  background: #ff004f;
+  transform: translateY(-10px);
+}
+
+/* <!-- -----------------My Work-------------- --> */
+#portfolio {
+  padding: 50px 0;
+}
+.work-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+}
+.work {
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+.work img {
+  width: 100%;
+  /* height: 100%; */
+  border-radius: 10px;
+  display: block;
+  transition: transform 0.5s;
+  height: 100%;
+}
+.layer {
+  width: 100%;
+  height: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), #ff004f);
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 20px;
+  text-align: center;
+  font-size: 14px;
+  transition: height 0.5s;
+}
+.layer h3 {
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+.layer a {
+  margin-top: 10px;
+  color: #ff004f;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 60px;
+  background: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-align: center;
+}
+.work:hover img {
+  transform: scale(1.1);
+}
+.work:hover .layer {
+  height: 100%;
+}
+.btn {
+  display: block;
+  margin: 50px auto;
+  width: fit-content;
+  border: 1px solid #ff004f;
+  padding: 14px 50px;
+  border-radius: 6px;
+  color: #fff;
+  text-decoration: none;
+
+  transition: background 0.5s;
+}
+.btn:hover {
+  background: #ff004f;
+}
+
+/* ------------------contact-------------- */
+
+.contact-left {
+  flex-basis: 35%;
+}
+.contact-right {
+  flex-basis: 60%;
+}
+.contact-left p {
+  margin-top: 30px;
+}
+.contact-left p i {
+  color: #ff004f;
+  margin-right: 15px;
+  font-size: 25px;
+}
+
+.social-icons {
+  margin-top: 30px;
+}
+.social-icons a {
+  text-decoration: none;
+  font-size: 30px;
+  margin-right: 15px;
+  color: #ababab;
+  display: inline-block;
+  transition: transform 0.5s;
+}
+.social-icons a:hover {
+  color: #ff004f;
+  transform: translateY(-5px);
+}
+.btn.btn2 {
+  display: inline-block;
+  background: #ff004f;
+}
+.contact-right form {
+  width: 100%;
+}
+form input,
+form textarea {
+  width: 100%;
+  border: 0;
+  outline: none;
+  background: #262626;
+  padding: 15px;
+  margin: 15px 0;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 6px;
+}
+form .btn2 {
+  padding: 14px 60px;
+  font-size: 18px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.copy {
+  width: 100%;
+  text-align: center;
+  padding: 15px 0;
+  background: #262626;
+  font-weight: 300;
+  margin-top: 20px;
+}
+.top {
+  position: fixed;
+  bottom: 2.1rem;
+  /* right: 2,1rem; */
+}
+.top i {
+  color: #000;
+  background-color: #ff0051;
+  font-size: 25px;
+  padding: 10px;
+  border-radius: 0.5rem;
+  scroll-behavior: smooth;
+}
+
+/*--------------------- MY Skills------------------ */
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+  color: aliceblue;
+}
+
+.container1 {
+  width: 600px;
+  height: 500px;
+  padding: 75px 90px;
+  margin-left: 120px;
+}
+
+.heading1 {
+  text-align: center;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  text-decoration-thickness: 5px;
+  margin-bottom: 50px;
+
+}
+
+.bar {
+  font-size: 23px;
+}
+
+.Technical-bars .bar {
+  margin-top: 40px 0;
+}
+
+.Technical-bars .bar:first-child {
+  margin-top: 0;
+}
+
+.Technical-bars .bar:last-child {
+  margin-bottom: 0px;
+}
+
+.Technical-bars .bar .info {
+  margin-bottom: 5px;
+}
+
+.Technical-bars .bar .info span {
+  font-size: 17px;
+  font-weight: 500;
+  animation: showText 0.5s 1s linear forwards;
+  opacity: 0;
+}
+
+.Technical-bars .bar .progress-line {
+  position: relative;
+  border-radius: 10px;
+  width: 100%;
+  height: 5px;
+  background-color: #000000;
+  animation: animate 1s forwards;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+@keyframes animate {
+  100% {
+    transform: scaleX(1);
+  }
+}
+.Technical-bars .bar .progress-line span {
+  height: 100%;
+  background-color: #ff0051;
+  position: absolute;
+  border-radius: 10px;
+  animation: animate 1s forwards;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+.progress-line.html span {
+  width: 80%;
+}
+.progress-line.css span {
+  width: 78%;
+}
+.progress-line.javascritp span {
+  width: 50%;
+}
+.progress-line.bootstrap span {
+  width: 60%;
+}
+.progress-line.react span {
+  width: 40%;
+}
+.progress-line span::after {
+  position: absolute;
+  padding: 1px 8px;
+  background-color: #000;
+  color: #fff;
+  font-size: 12px;
+  border-radius: 3px;
+  top: -28px;
+  right: -20px;
+  animation: showText 0.5s 1.5s linear forwards;
+  opacity: 0;
+}
+.progress-line.html span::after {
+  content: 90%;
+}
+.progress-line.css span::after {
+  content: 60%;
+}
+.progress-line.javascritp span::after {
+  content: 85%;
+}
+.progress-line.bootstrap span::after {
+  content: 90%;
+}
+.progress-line.react span::after {
+  content: 90%;
+}
+
+.progress-line span::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 7px solid transparent;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+  border-top-color: #000;
+  top: -10px;
+  right: 0;
+  animation: showText 0.5s 1.5s linear forwards;
+  opacity: 0;
+}
+@keyframes showText {
+  100% {
+    opacity: 1;
+  }
+}
+.radial-bars {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+.radial-bars .radial-bar {
+  width: 50%;
+  height: 170px;
+  margin-bottom: 10px;
+  position: relative;
+}
+.radial-bars .radial-bar svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120px;
+  height: 160px;
+  transform: translate(-50%, -50%) rotate(-90deg);
+}
+.radial-bars .radial-bar .progress-bar {
+  stroke-width: 10;
+  stop-color: black;
+  fill: transparent;
+  stroke-dasharray: 502;
+  stroke-dashoffset: 502;
+  stroke-linecap: round;
+  animation: animate-bar 1s linear forwards;
+}
+@keyframes animate-bar {
+  100% {
+    stroke-dashoffset: -1;
+  }
+}
+.path {
+  stroke-width: 10;
+  stroke: #ff0051;
+  fill: transparent;
+  stroke-dasharray: 502;
+  stroke-dashoffset: 502;
+  stroke-linecap: round;
+}
+.path-1 {
+  animation: animate-path1 1s 1s linear forwards;
+}
+.path-2 {
+  animation: animate-path2 1s 1s linear forwards;
+}
+.path-3 {
+  animation: animate-path3 1s 1s linear forwards;
+}
+.path-4 {
+  animation: animate-path4 1s 1s linear forwards;
+}
+
+@keyframes animate-path1 {
+  100% {
+    stroke-dashoffset: 50;
+  }
+}
+@keyframes animate-path2 {
+  100% {
+    stroke-dashoffset: 175;
+  }
+}
+@keyframes animate-path3 {
+  100% {
+    stroke-dashoffset: 125;
+  }
+}
+@keyframes animate-path4 {
+  100% {
+    stroke-dashoffset: 75;
+  }
+}
+
+.radial-bar .percentage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 17px;
+  font-weight: 500;
+  animation: showText 0.5s 1s linear forwards;
+  opacity: 0;
+}
+.radial-bar .text {
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50px);
+  font-size: 17px;
+  font-weight: 500;
+  animation: showText 0.5s 1s linear forwards;
+  opacity: 0;
+}
+.sub-title-skill {
+  font-size: 60px;
+  font-weight: 600;
+  color: #fff;
+  margin: 0px 150px;
+}
+nav .fas {
+  display: none;
+}
+
+/* ----------------------responsive--------------- */
+/* -------------Css for small screen--------------- */
+
+@media only screen and (max-width: 600px) {
+
+
+  #header {
+    background-image: url(img/bilal\ pic\ 3.jpg);
+   background-position-y: -150%;
+   background-size: contain;
+    
+
+    /* opacity: 0.67; */
+  }
+  .header-text {
+    margin-top: 100%;
+    font-size: 30px;
+  }
+
+  #sidemenu{
+    margin-right: -100px;
+    top: -20px;
+  
+  }
+
+  .header-text h1 {
+    font-size: 40px;
+    color: #ff0051;
+  }
+  #element-1 {
+    color: #fff;
+  }
+  #element {
+    color: #fff;
+  }
+
+  nav .fas {
+    display: block;
+    font-size: 25px;
+  
+  }
+  nav ul {
+    background: #ff004f;
+    position: fixed;
+    top: -16px;
+    right: -300px;
+ 
+    /* left: 310.1px; */
+    width: 200px;
+    height: 100vh;
+    padding-top: 50px;
+    z-index: 2;
+    transition: right 0.5s;
+    opacity: 1;
+  }
+  nav ul li {
+    display: block;
+    margin: 25px;
+  }
+  nav ul .fas {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    cursor: pointer;
+  }
+  .sub-title {
+    font-size: 40px;
+  }
+  .sub-title-skill {
+    font-size: 40px;
+    margin-left: 45px;
+    flex-basis: 100%;
+  }
+  .about-col-1,
+  .about-col-2 {
+    flex-basis: 100%;
+  }
+  .about-col-1 {
+    margin-bottom: 30px;
+  }
+  .about-col-2 {
+    font-size: 14px;
+  }
+  .tab-links {
+    font-size: 16px;
+    margin-right: 20px;
+  }
+
+  .contact-left,
+  .contact-right {
+    flex-basis: 100%;
+  }
+
+  .container1 {
+    width: 600px;
+    height: 500px;
+    padding: 75px 90px;
+ margin-left: -30px;
+  }
+  .heading1 {
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 3px;
+    margin-bottom: 50px;
+    
+  
+  }
+
+  .layer a{
+
+    margin-top: 20px;
+    color: #ff004f;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+  }
+
+  .layer {
+   
+   
+    padding: 0 5px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+  }
+  .logo{
+    font-size: 30px;
+  }
+  
+ 
+}
+
+    </style>
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <a class="logo" href="#">Portfolio</a>
+          <ul id="sidemenu">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#Skills">My Skills</a></li>
+            <li><a href="#portfolio">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <i class="fas fa-times" onclick="closemenu()"></i>
+          </ul>
+
+          <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+         
+          <h1>Hi,I'm <span id="element-1">Muhammad Bilal</span> <br />From Pakistan</h1>
+          
+          <span id="element"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- /* ------------------ABOUT------------- */ -->
+
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="img/ABOUTIMG (2).jpeg" alt="" />
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+              beatae dolorum modi? Voluptatum commodi harum veniam nihil
+              repudiandae quas soluta perspiciatis quisquam iusto pariatur.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Veritatis, esse itaque sequi praesentium, reiciendis error ad
+              voluptatem molestiae aliquid in architecto facilis quidem maiores
+              magnam perferendis accusamus quam non aut sequi neque ut!
+            </p>
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">
+                Skills
+              </p>
+              <p class="tab-links" onclick="opentab('experience')">
+                Experience
+              </p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li><span>Web Development</span><br />Front-End-Development</li>
+                <li>
+                  <span>Graphic Design</span><br />Animation/Boards Design
+                </li>
+                <li><span>UI/UX</span><br />Designing Web interface</li>
+              </ul>
+            </div>
+
+            <div class="tab-contents" id="experience">
+              <ul>
+                <li>
+                  <span>2022 - Current</span><br />Front-End-Development
+                  Training at Bano Qabil 2.O
+                </li>
+                <li>
+                  <span>2023 - Current</span><br />Graphic Design Training at
+                  Bano Qabil 2.O
+                </li>
+                <li>
+                  <span>Current</span><br />UI/UX Design Strating Now form
+                  YouTube
+                </li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="education">
+              <ul>
+                <li>
+                  <span>2023 - Current</span><br />Front-End-Development
+                  Training at Bano Qabil 2.O
+                </li>
+                <li>
+                  <span>2023 - Current</span><br />Graphic Design Training at
+                  Bano Qabil 2.O
+                </li>
+                <li>
+                  <span>Current</span><br />UI/UX Design Strating Now form
+                  YouTube
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ----------------Services---------------- -->
+
+    <div id="services">
+      <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+          <div>
+            <i class="fas fa-desktop"></i>
+            <h2>Web Development</h2>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat
+              architecto voluptatibus, sed corporis error non odit sint nisi id?
+              Dolor eligendi voluptatum aspernatur totam fugiat assumenda nemo?
+              Animi, ea nesciunt.
+            </p>
+            <a href="#">Learn More</a>
+          </div>
+          <div>
+            <i class="fas fa-code"></i>
+            <h2>Web Design</h2>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat
+              architecto voluptatibus, sed corporis error non odit sint nisi id?
+              Dolor eligendi voluptatum aspernatur totam fugiat assumenda nemo?
+              Animi, ea nesciunt.
+            </p>
+            <a href="#">Learn More</a>
+          </div>
+          <div>
+            <i class="fas fa-crop-alt"></i>
+            <h2>UI/UX Design</h2>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat
+              architecto voluptatibus, sed corporis error non odit sint nisi id?
+              Dolor eligendi voluptatum aspernatur totam fugiat assumenda nemo?
+              Animi, ea nesciunt.
+            </p>
+            <a href="#">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!----------------------------- My Skills --------------------------->
+
+    <h1 class="sub-title-skill">My Skills</h1>    
+    <section>
+      
+      <div class="container1" id="Skills">
+        
+
+
+          <h1 class="heading1">Technical Skills</h1>
+          <div class="Technical-bars">
+              <div class="bar"><i class='bx bxl-html5' style='color:#c95d3e'></i>
+                  <div class="info">
+                      <span>HTML</span>
+                  </div>
+                  <div class="progress-line html">
+                      <span></span>
+                  </div>
+              </div>
+
+              <div class="bar"><i class='bx bxl-css3' style='color:#147bbc'></i>
+                  <div class="info">
+                      <span>CSS</span>
+                  </div>
+                  <div class="progress-line css">
+                      <span></span>
+                  </div>
+              </div>
+              <div class="bar"><i class='bx bxl-javascript' style='color:#b0bc1e'></i>
+                  <div class="info">
+                      <span>Javacritp</span>
+                  </div>
+                  <div class="progress-line javascritp">
+                      <span></span>
+                  </div>
+              </div>
+              <div class="bar"><i class='bx bxl-bootstrap' style='color:#8612fb'></i>
+                  <div class="info">
+                      <span>Bootstrap</span>
+                  </div>
+                  <div class="progress-line bootstrap">
+                      <span></span>
+                  </div>
+              </div>
+              <div class="bar"><i class='bx bxl-react' style='color:#69bcbc'></i>
+                  <div class="info">
+                      <span>React</span>
+                  </div>
+                  <div class="progress-line react">
+                      <span></span>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+
+
+
+      <div class="container1">
+          <h1 class="heading1">Professional Skills</h1>
+          <div class="radial-bars">
+
+
+              <div class="radial-bar">
+                  <svg x="0px" y="0px" viewBox="0 0 200 200">
+                      <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                      <circle class="path path-1" cx="100" cy="100" r="80"></circle>
+                  </svg>
+                  <div class="percentage">90%</div>
+                  <div class="text">Creativity</div>
+              </div>
+              <div class="radial-bar">
+                  <svg x="0px" y="0px" viewBox="0 0 200 200">
+                      <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                      <circle class="path path-1" cx="100" cy="100" r="80"></circle>
+                  </svg>
+                  <div class="percentage">65%</div>
+                  <div class="text">Cmmunication</div>
+              </div>
+              <div class="radial-bar">
+                  <svg x="0px" y="0px" viewBox="0 0 200 200">
+                      <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                      <circle class="path path-1" cx="100" cy="100" r="80"></circle>
+                  </svg>
+                  <div class="percentage">75%</div>
+                  <div class="text">Problem Solving </div>
+              </div>
+              <div class="radial-bar">
+                  <svg x="0px" y="0px" viewBox="0 0 200 200">
+                      <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                      <circle class="path path-1" cx="100" cy="100" r="80"></circle>
+                  </svg>
+                  <div class="percentage">85%</div>
+                  <div class="text">Team Work</div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+    <!-- -----------------My Work-------------- -->
+
+    <div id="portfolio">
+      <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+          <div class="work">
+            <img
+              src="https://images.unsplash.com/photo-1487014679447-9f8336841d58?q=80&w=1605&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt=""
+            />
+            <div class="layer">
+              <h3>E-commers Website</h3>
+              <p>
+                An ecommerce website is your digital storefront on the internet.
+                It facilitates the transaction between a buyer and seller. It is
+                the virtual space where you showcase products, and online
+                customers make selections.
+              </p>
+              <a href="#"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <div class="work">
+            <img
+              src="https://images.unsplash.com/photo-1609921212029-bb5a28e60960?q=80&w=1704&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt=""
+            />
+            <div class="layer">
+              <h3>Business Boards And Cards</h3>
+              <p>
+                a small card bearing information (such as name and address)
+                about a business or business representative.
+              </p>
+              <a href="#"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <div class="work">
+            <img
+              src="https://images.unsplash.com/photo-1559028012-481c04fa702d?q=80&w=1636&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt=""
+            />
+            <div class="layer">
+              <h3>UI/UX Design</h3>
+              <p>
+                UI refers to the screens, buttons, toggles, icons, and other
+                visual elements that you interact with when using a website,
+                app, or other electronic device. UX refers to the entire
+                interaction you have with a product, including how you feel
+                about the interaction.
+              </p>
+              <a href="#"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="btn">See More</a>
+      </div>
+    </div>
+
+    <!-- /* ------------------contact-------------- */ -->
+
+    <div id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="contact-left">
+         <h1 class="sub-title"> Contact Me</h1>
+         <p> <i class="fas fa-paper-plane"></i>bilalcodes@gmail.com</p>
+         <p> <i class="fas fa-phone-square-alt"></i>03353165603</p>
+
+            <div class="social-icons">
+              <a href=""><i class="fab fa-facebook"></i></a>
+              <a href=""><i class="fab fa-instagram"></i></a>
+              <a href=""><i class="fab fa-whatsapp"></i></a>
+              <a href=""><i class="fab fa-linkedin"></i></a>
+            </div>
+            <a href="" download class="btn btn2">Download CV</a>
+          </div>
+          <div class="contact-right">
+            <form action="#">
+
+              <input type="text" name="Name" placeholder="Enter Your Company Name" id="username" required autocomplete="off"/>
+
+
+              <input type="email" id="email" name="Email"placeholder="Enter Email" required autocomplete="off"/>
+  
+              <textarea name="Message" id="textarea"  rows="6" autocomplete="off" placeholder="Enter Your Message" required min= "5"> </textarea>
+  
+              <a href="project 1/index.html"><button class="btn btn2" type="submit">Submit</button></a>
+            </form>
+            
+
+          </div>
+
+          
+          </div>
+        </div>
+      </div>
+
+
+      <!-- ---------------footer--------------------- -->
+      <div class="copy">
+        <p>Copyright &copy; Kevin.</p>
+      </div>
+      <a href="" class="top"><i class='bx bx-up-arrow-alt' style='color:#000' ></i></a>
+    </div>
+   
+
+
+     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+     <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+  
+      function opentab(tabname) {
+        for (tablink of tablinks) {
+          tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+
+
+      // typing
+      var typed = new Typed('#element', {
+      strings: ['<i>Front End</i> Developer.', '&amp; Graphic Desiner.' , 'Web Desiner'],
+      typeSpeed: 50,
+    });
+      var typed = new Typed('#element-1', {
+      strings: ['<i>Muhammad <br> Bilal.' ],
+      typeSpeed: 80,
+    });
+
+
+    </script>
+    <script>
+          // ------------Responsive------------------
+     
+          var sidemenu = document.getElementById("sidemenu");
+
+          function openmenu() {
+
+            sidemenu.style.right = "0";
+            
+            
+          }
+          function closemenu() {
+
+            sidemenu.style.right = "-300px";
+
+            
+          }
+    </script>
+  </body>
+
+
+
+
+
+
+
+
+</html>
